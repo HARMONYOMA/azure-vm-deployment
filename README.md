@@ -43,10 +43,12 @@ The script:
 ---
 
 ## Folder Structure
+```bash
 azure-vm-deployment/
-├── image/                 ### Screenshot of successful deployment
-├── README.md              ###Project documentation
-└── vm-deployment.sh       ### Bash automation script
+├── image/                 # Screenshot of successful deployment
+├── README.md              #Project documentation
+└── vm-deployment.sh       #Bash automation script
+```
 
 ---
 
