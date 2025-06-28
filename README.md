@@ -1,7 +1,8 @@
 # 🚀 Azure Virtual Machine Deployment with Bash Automation
 
 ## Project Overview
-This project demonstrates how to create and deploy a Virtual Machine (VM) on Microsoft Azure using Azure CLI. I also automated the entire process using a Bash script to make the deployment faster and more efficient.
+This project demonstrates how to create and deploy a Virtual Machine (VM) on Microsoft Azure using Azure CLI.  
+I also automated the entire process using a Bash script to make the deployment faster and more efficient.
 
 The script:
 - Logs into Azure
@@ -10,6 +11,8 @@ The script:
 - Opens port 80 to allow web traffic
 - Retrieves the public IP address of the VM
 - Provides an option to automatically clean up resources to avoid extra costs
+
+---
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -22,10 +25,14 @@ The script:
 - [Resources](#resources)
 - [Deployment Success Screenshot](#deployment-success-screenshot)
 
+---
+
 ## Technologies Used
 - Azure CLI
 - Ubuntu 22.04 LTS Virtual Machine
 - Bash scripting
+
+---
 
 ## Prerequisites
 - Azure CLI installed on your machine
@@ -33,9 +40,69 @@ The script:
 - Basic terminal/command line knowledge
 - SSH key setup (Azure CLI can auto-generate this)
 
+---
+
 ## Folder Structure
 ```bash
 azure-vm-deployment/
-├── image       # Screenshot of successful deployment
+├── image/                 # Screenshot of successful deployment
 ├── README.md              # Project documentation
 └── vm-deployment.sh       # Bash automation script
+
+##manual-deployment-steps
+
+If you want to manually deploy the VM instead of using the Bash script, follow these steps:
+### 1. Log into Azure using:
+```bash
+az login
+
+### 2. Create a Virtual Machine using Azure CLI.
+```bash
+az vm create \
+  --resource-group <your-resource-group> \
+  --name <your-vm-name> \
+  --image Ubuntu2204 \
+  --admin-username azureuser \
+  --generate-ssh-keys
+
+### 3. Open port 80 to allow web traffic:
+```bash
+az vm open-port --port 80 --resource-group <your-resource-group> --name <your-vm-name>
+
+### 4. Retrieve the public IP address of the VM:
+```bash
+az vm list-ip-addresses --name <your-vm-name> --resource-group <your-resource-group>
+
+### 5. Connect to the VM via SSH:
+```bash
+ssh azureuser@<your-public-ip>
+
+## How to Use the Bash Script
+
+### 1. Make the Script Executable
+In your terminal, navigate to the project folder and run:
+```bash
+chmod +x vm-deployment.sh
+
+### 2. Execute the script with
+```bash
+./vm-deployment.sh
+
+### 3. After the script finishes, it will display the SSH command.
+Use it to connect to your VM:
+```bash
+ azureuser@<your-public-ip>
+
+##learnings
+- How to deploy and manage Azure cloud resources using CLI.
+- How to automate virtual machine deployment with Bash.
+- How to securely connect to virtual machines using SSH.
+- The importance of cleaning up resources to prevent unnecessary cloud costs.
+
+##resources
+- Azure CLI Documentation
+- Azure VM Quickstart Guide
+- HARMONYOMA/azure-vm-deployment
+
+##image
+- Screenshot of successful deployment
