@@ -51,7 +51,7 @@ azure-vm-deployment/
 
 ---
 
-#Manual-deployment-steps
+Manual-deployment-steps
 
 If you want to manually deploy the VM instead of using the Bash script, follow these steps:
 ### 1. Log into Azure using:
@@ -81,7 +81,7 @@ ssh azureuser@<your-public-ip>
 
 ---
 
-# How to Use the Bash Script
+How to Use the Bash Script
 
 ### 1. Make the Script Executable
 In your terminal, navigate to the project folder and run:
@@ -99,7 +99,7 @@ Use it to connect to your VM:
 
 ---
 
-#learnings
+Learnings
 - How to deploy and manage Azure cloud resources using CLI.
 - How to automate virtual machine deployment with Bash.
 - How to securely connect to virtual machines using SSH.
@@ -107,12 +107,12 @@ Use it to connect to your VM:
 
 ---
 
-#resources
+Resources
 - Azure CLI Documentation
 - Azure VM Quickstart Guide
 - HARMONYOMA/azure-vm-deployment
 
 ---
 
-#image
+Image
 - Screenshot of successful deployment
