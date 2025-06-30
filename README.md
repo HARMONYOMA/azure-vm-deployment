@@ -107,10 +107,9 @@ Use it to connect to your VM:
 ---
 
 ## Resources
-- Azure CLI Documentation
-- Azure VM Quickstart Guide
-- HARMONYOMA/azure-vm-deployment.
-
+- [Azure CLI Documentation](https://learn.microsoft.com/en-us/cli/azure/)
+- [Azure VM Quickstart Guide](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli)
+- [Blog Post](https://cloudsteps.hashnode.dev/deploy-a-virtual-machine-on-azure-using-azure-cli#heading-step-1-prepare-azure-cli)
 ---
 
 ## Image
